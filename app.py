@@ -93,7 +93,6 @@ def index():
                 flash("Prediction failed. Please try again.")
 
         else:
-            flash("Invalid file type! Only png, jpg, jpeg allowed.")
             return redirect(request.url)
 
     return render_template("index.html", prediction=prediction, confidence=confidence)

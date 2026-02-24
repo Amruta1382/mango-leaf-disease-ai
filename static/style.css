@@ -1,0 +1,62 @@
+/* ===== Background ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url("/static/images/mango-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== Fixed UI Card ===== */
+.main-container {
+    width: 700px;          /* FIXED WIDTH */
+    min-height: 500px;     /* FIXED HEIGHT */
+    margin: 80px auto;
+    background-color: rgba(175, 240, 245, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+/* ===== Bigger Predict Button ===== */
+.predict-btn {
+    background-color: #ff9800;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 60%;
+}
+
+.predict-btn:hover {
+    background-color: #e68900;
+}
+
+/* ===== Result Box ===== */
+.result-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff8e1;   /* LIGHT COLOR */
+    border-radius: 12px;
+    border: 2px solid #ffcc80;
+}
+
+/* ===== Prediction Text ===== */
+.result-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/* ===== Confidence Text ===== */
+.confidence-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ef6c00;
+    margin-top: 10px;
+}

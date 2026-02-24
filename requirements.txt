@@ -1,6 +1,6 @@
 Flask==2.3.2
-gunicorn
+tensorflow-cpu==2.11.0
 numpy
-Pillow
 pymongo
-tensorflow==2.10.0
+python-dotenv
+gunicorn
