@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mango Leaf Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="main-container">
+
+        <h1 class="title">Mango Leaf Disease Detection 🌿</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required class="file-input">
+            <br>
+            <button type="submit" class="predict-btn">Predict</button>
+        </form>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="flash">
+              {% for msg in messages %}
+                <p>{{ msg }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        {% if prediction %}
+            <div class="result-box">
+                <p class="result-text">Prediction: {{ prediction }}</p>
+                <p class="confidence-text">Confidence: {{ confidence }}%</p>
+            </div>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>

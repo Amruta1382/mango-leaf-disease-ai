@@ -1,0 +1,97 @@
+/* ===== BLUR BACKGROUND ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url("/static/images/mango-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Blur effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+/* ===== FIXED UI CARD ===== */
+.main-container {
+    width: 700px;          
+    height: 500px;          /* FIXED HEIGHT */
+    margin: 80px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+/* ===== TITLE ===== */
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1b5e20;
+    margin-bottom: 30px;
+}
+
+/* ===== FILE INPUT ===== */
+.file-input {
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* ===== BUTTON ===== */
+.predict-btn {
+    background-color: #ff9800;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.predict-btn:hover {
+    background-color: #e68900;
+}
+
+/* ===== RESULT BOX ===== */
+.result-box {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #e8f5e9;
+    border-radius: 15px;
+    border: 3px solid #2e7d32;
+}
+
+/* ===== PREDICTION TEXT ===== */
+.result-text {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+/* ===== CONFIDENCE TEXT ===== */
+.confidence-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e65100;
+    margin-top: 10px;
+}
+
+/* ===== FLASH MESSAGE ===== */
+.flash {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
